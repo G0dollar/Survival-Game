@@ -1,8 +1,11 @@
 new THREE.Scene();
+const scene = new THREE.Scene();
 const aspect = window.innerWidth / window.innerHeight;
 let FOV = 90;
 new THREE.PerspectiveCamera(FOV, aspect , 0.1 , 1000);
+const camera = new THREE.PerspectiveCamera(FOV, aspect, 0.1, 1000);
 new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 scene.background = new THREE.Color(0x87ceeb);
